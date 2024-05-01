@@ -26,10 +26,10 @@ pipeline {
     }  
     post {
         success {
-            echo 'Pipeline succeeded!'
+            echo 'Pipeline succeeded!  HO-HO-HO !!!'
         }
         failure {
-            echo 'Pipeline failed!'
+            echo 'Pipeline failed!   HO-HO-HO !!!'
         }
     }
 }
