@@ -29,7 +29,7 @@ pipeline {
             echo 'Pipeline succeeded!  HO-HO-HO !!!'
         }
         failure {
-            echo 'Pipeline failed!   HO-HO-HO !!!'
+            echo 'Pipeline failed!   HO-HO-HO !!!  '
         }
     }
 }
