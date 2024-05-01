@@ -30,7 +30,7 @@ pipeline {
             steps {
                 echo 'Deploying...'
                 sh 'ls -la'
-                sh 'echo "THIS IS A TRIGGERED by ${GITHUB_EVENT_NAME}"
+                sh 'echo "THIS IS A TRIGGERED by ${env.GITHUB_EVENT_NAME}"
                 echo 'Deploy finished....'
             }
         }
