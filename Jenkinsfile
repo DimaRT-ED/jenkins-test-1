@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the project...  FROM NEW BRANCH'
+                echo 'Building the project...  FROM -- OTHER -- BRANCH'
                 sh 'ls -la'
                 echo 'Build finished....'
             }
         }
         stage('Test') {
             steps {
-                echo 'Running tests... FROM NEW BRANCH'
+                echo 'Running tests... FROM -- OTHER -- BRANCH'
                 sh 'cat README.md'
                 echo 'Test finished....'
             }
@@ -26,10 +26,10 @@ pipeline {
     }  
     post {
         success {
-            echo 'Pipeline succeeded!  HO-HO-HO !!! FROM NEW BRANCH'
+            echo 'Pipeline succeeded!  HO-HO-HO !!! FROM -- OTHER -- BRANCH'
         }
         failure {
-            echo 'Pipeline failed!   HO-HO-HO !!! FROM NEW-BRANCH '
+            echo 'Pipeline failed!   HO-HO-HO !!! FROM -- OTHER --  BRANCH '
         }
     }
 }
