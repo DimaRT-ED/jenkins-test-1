@@ -4,21 +4,21 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the project...'
+                echo 'Building the project...  FROM NEW BRANCH'
                 sh 'ls -la'
                 echo 'Build finished....'
             }
         }
         stage('Test') {
             steps {
-                echo 'Running tests...'
+                echo 'Running tests... FROM NEW BRANCH'
                 sh 'cat README.md'
                 echo 'Test finished....'
             }
         }   
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                echo 'Deploying... FROM NEW BRANCH'
                 sh 'ls -la'
                 echo 'Deploy finished....'
             }
