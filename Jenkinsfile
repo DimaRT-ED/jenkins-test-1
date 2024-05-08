@@ -7,16 +7,6 @@ pipeline {
                 echo 'Building the project...'
                 sh 'ls -la'
                 echo 'Build finished....'
-                script {
-                    // Check if the build was triggered by a GitHub event
-                    if (env.CHANGE_AUTHOR != null) {
-                        echo "Build triggered by GitHub user: ${env.CHANGE_AUTHOR}"
-                    } else if (env.CHANGE_ID != null) {
-                        echo "Build triggered by GitHub pull request"
-                    } else {
-                        echo "Build triggered by other means"
-                    }
-                }
             }
         }
         stage('Test') {
